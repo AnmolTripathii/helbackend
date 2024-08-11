@@ -13,4 +13,7 @@ router.route('/delete/:id').delete(verifyJWT, deleteUser);
 router.route('/getlist').get(verifyJWT,getlist)
 router.route('/data/:id').get(verifyJWT,getdata)
 router.route('/getuser').get(verifyJWT,getCurrentUser)
+router.get('/', async (req, res) => {
+    res.send("hello world");
+});
 export default router
